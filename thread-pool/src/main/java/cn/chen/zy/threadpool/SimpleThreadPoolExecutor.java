@@ -1,5 +1,6 @@
 package cn.chen.zy.threadpool;
 
+import cn.chen.zy.ex.ThreadPoolJobFailedException;
 import cn.chen.zy.log.LogFactory;
 import cn.chen.zy.thread.AtomicThreadFactory;
 import org.slf4j.Logger;
@@ -62,7 +63,7 @@ public class SimpleThreadPoolExecutor<T> extends ThreadPoolExecutor {
                     log.info("{} - execute success : {}", Thread.currentThread().getName(), r), this)
                 .exceptionallyAsync(ex -> {
                     log.error("{} - execute failed : {}", Thread.currentThread().getName(), ex.getMessage());
-                    throw new RuntimeException(ex.getMessage());
+                    throw new ThreadPoolJobFailedException(ex.getMessage());
                 }, this);
         jobList.add(jobFuture);
     }
