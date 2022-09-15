@@ -11,6 +11,7 @@
     <modules>
         <module>thread-pool</module>
         <module>slf4j-api-extension</module>
+        <module>central-provider</module>
     </modules>
 
     <properties>
@@ -38,6 +39,12 @@
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
                 <scope>test</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.9.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
