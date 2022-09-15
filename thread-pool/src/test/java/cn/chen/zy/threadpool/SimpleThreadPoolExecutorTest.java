@@ -19,7 +19,7 @@ public class SimpleThreadPoolExecutorTest {
     @Test
     public void executeTest() {
 
-        AtomicThreadFactory atomicThreadFactory = new AtomicThreadFactory("completableFuture");
+        AtomicThreadFactory atomicThreadFactory = new AtomicThreadFactory("多线程卖票");
 
         SimpleThreadPoolExecutor<Integer> threadPoolExecutor
                 = new SimpleThreadPoolExecutor<>(0, TimeUnit.MILLISECONDS, atomicThreadFactory);
