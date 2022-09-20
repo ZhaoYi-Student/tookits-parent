@@ -26,6 +26,11 @@ public class GsonUtil {
         }.getType());
     }
 
+    public static <K, V> List<Map<K, V>> fromJsonToListMap(String json, Class<K> targetKeyClazz, Class<V> targetValueClazz) {
+        return GSON.fromJson(json, new TypeToken<List<Map<K, V>>>() {
+        }.getType());
+    }
+
     public static <T> List<T> fromJsonToList(String json, Class<T> targetClazz) {
         return GSON.fromJson(json, new TypeToken<List<T>>() {
         }.getType());
