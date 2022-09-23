@@ -4,10 +4,8 @@ import cn.chen.zy.parse.GsonUtil;
 import cn.chen.zy.util.DateUtil;
 
 import java.io.PrintStream;
-import java.lang.reflect.Proxy;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 public class SimpleConsoleAdapter implements ConsoleAdapter {
