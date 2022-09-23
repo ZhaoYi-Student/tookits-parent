@@ -12,6 +12,7 @@
         <module>thread-pool</module>
         <module>slf4j-api-extension</module>
         <module>central-provider</module>
+        <module>zylog-api</module>
     </modules>
 
     <properties>

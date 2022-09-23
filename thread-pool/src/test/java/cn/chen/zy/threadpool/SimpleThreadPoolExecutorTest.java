@@ -1,5 +1,7 @@
 package cn.chen.zy.threadpool;
 
+import cn.chen.zy.factory.ZyLog;
+import cn.chen.zy.factory.ZyLogFactory;
 import cn.chen.zy.log.LogFactory;
 import cn.chen.zy.thread.AtomicThreadFactory;
 import org.junit.Test;
@@ -14,7 +16,8 @@ public class SimpleThreadPoolExecutorTest {
 
     private int ticket = 1000;
 
-    private static final Logger log = LogFactory.getLogFactory(SimpleThreadPoolExecutorTest.class);
+    //    private static final Logger log = LogFactory.getLogFactory(SimpleThreadPoolExecutorTest.class);
+    private static final ZyLog log = ZyLogFactory.getZyLogFactory(SimpleThreadPoolExecutorTest.class);
 
     @Test
     public void executeTest() {
